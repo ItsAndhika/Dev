@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-5xl
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply h-60 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden;
+    }
+}
+
+@layer utilities {
+    #toggle:checked~label div .toggle-circle {
+        transform: translateX(15px);
+    }
+}

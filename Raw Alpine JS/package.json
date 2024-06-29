@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "alpinejs": "^3.10.5"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  }
+}

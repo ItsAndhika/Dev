@@ -1,0 +1,38 @@
+// CSS Variable
+// :root {
+//     --primary-color: #ccc;
+//     --secondary-color: green;
+// }
+
+// .container {
+//     background-color: var(--primary-color);
+//     h1 {
+//         color: var(--secondary-color);
+//     }
+// }
+
+// SASS Variable
+// $primary-color: #ccc;
+
+// body {
+//     $secondary-color: green !global;
+//     background-color: $primary-color;
+// }
+
+// h1 {
+//     color: $secondary-color;
+// }
+
+// Map
+// $alert-danger: red;
+// $alert-success: green;
+
+$alert: (
+    'danger': red,
+    'success': green,
+    'warning': orange,
+);
+
+h1 {
+    color: map-get($alert, 'danger')
+}

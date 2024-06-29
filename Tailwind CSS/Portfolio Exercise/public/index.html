@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tailwind Portfolio</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<!-- HEADER START -->
+		<header
+			class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+		>
+			<div class="container 2xl:px-20">
+				<div class="flex items-center justify-between relative">
+					<div class="px-4">
+						<a href="#home" class="font-bold text-lg text-primary block py-6"
+							>totlodon</a
+						>
+					</div>
+					<div class="flex items-center px-4">
+						<button
+							id="nav-mobile-button"
+							type="button"
+							class="block absolute right-4"
+						>
+							<span
+								class="nav-mobile-button origin-left transition duration-500 ease-in-out"
+							></span>
+							<span
+								class="nav-mobile-button transition duration-500 ease-in-out"
+							></span>
+							<span
+								class="nav-mobile-button origin-left transition duration-500 ease-in-out"
+							></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- HEADER END -->
+
+		<main>
+			<!-- HERO SECTION START -->
+			<section id="hero" class="pt-36">
+				<div class="container 2xl:px-20">
+					<div class="flex flex-wrap">
+						<div class="w-full self-center px-4 lg:w-1/2">
+							<h1 class="text-base font-semibold text-primary md:text-xl">
+								Ciao a Tutti 👋, Io sono
+								<span class="block font-bold text-dark text-4xl lg:text-5xl"
+									>Totlodon</span
+								>
+							</h1>
+							<h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
+								<span class="text-dark">Web Developer</span> | Student
+							</h2>
+							<p class="font-medium text-slate-400 mb-10 leading-relaxed">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim,
+								<span class="text-dark font-bold">sint.</span>
+							</p>
+							<a
+								href=""
+								class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full transition-all duration-300 ease-in-out hover:bg-sky-600"
+								>Contact Me</a
+							>
+						</div>
+						<div class="w-full self-end px-4 lg:w-1/2">
+							<div class="mt-10">
+								<img
+									src="./images/grocery-image.png"
+									,
+									alt="Profile Example"
+									class="max-w-full w-96 mx-auto"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- HERO SECTION END -->
+			<!-- ABOUT SECTION START -->
+			<section id="about" class="pt-36 pb-32">
+				<div class="container 2xl:px-20">
+					<div class="flex flex-wrap">
+						<div class="w-full px-4 mb-10 lg:w-1/2">
+							<h4 class="font-bold text-primary text-lg uppercase">About Me</h4>
+							<h2
+								class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl"
+							>
+								Aprendamos Tailwindcss juntos!
+							</h2>
+							<p
+								class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+								Veritatis dolorum eligendi fugiat dignissimos ducimus quia
+								nulla.
+							</p>
+						</div>
+						<div class="w-full px-4 lg:w-1/2">
+							<h3
+								class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-8"
+							>
+								Let's be friend
+							</h3>
+							<p class="font-medium text-base text-secondary mb-4 lg:text-lg">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+								maxime vitae necessitatibus soluta in dolorum! Quaerat, fuga
+								dolorum.
+							</p>
+							<div class="flex items-center">
+								<a
+									href="#"
+									class="w-10 h-10 mr-3 rounded-full border border-slate-300 flex justify-center items-center hover:border-primary hover:bg-primary"
+								>
+									<i data-feather="facebook"></i>
+								</a>
+								<a
+									href="#"
+									class="w-10 h-10 mr-3 rounded-full border border-slate-300 flex justify-center items-center hover:border-primary hover:bg-primary"
+								>
+									<i data-feather="youtube"></i>
+								</a>
+								<a
+									href="#"
+									class="w-10 h-10 mr-3 rounded-full border border-slate-300 flex justify-center items-center hover:border-primary hover:bg-primary"
+								>
+									<i data-feather="instagram"></i>
+								</a>
+								<a
+									href="#"
+									class="w-10 h-10 mr-3 rounded-full border border-slate-300 flex justify-center items-center hover:border-primary hover:bg-primary"
+								>
+									<i data-feather="twitter"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ABOUT SECTION END -->
+		</main>
+
+		<script src="./js/feather-icons.js"></script>
+		<script>
+			feather.replace();
+		</script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

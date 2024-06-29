@@ -1,0 +1,17 @@
+<%- include('layouts/header') %> 
+<%- include('layouts/navbar') %> 
+	<div class="container mb-3">
+		<h1>Workers List</h1>
+		<a href="/workers/add">Add worker data</a>
+		<% workers.forEach(worker => { %>
+		<ul class="list-group mt-3">
+  			<li class="list-group-item w-50">
+				<%= worker.name %>
+				<a href="/workers/details?id=<%= worker.id %>" class="btn btn-primary btn-sm float-end ms-2">Details</a>
+				<a href="/workers/delete?id=<%= worker.id %>" class="btn btn-danger btn-sm float-end ms-2" onclick="return confirm('Are you sure?')">Delete</a>
+				<a href="/workers/edit?id=<%= worker.id %>" class="btn btn-success btn-sm float-end">Edit</a>
+			</li>
+		</ul>
+		<% }) %>
+	</div>
+	<%- include('layouts/footer')  %> 

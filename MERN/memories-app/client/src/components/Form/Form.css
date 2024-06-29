@@ -1,0 +1,25 @@
+form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+#submit,
+#clear {
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+
+#submit {
+	color: white;
+	background-color: rgb(39, 39, 231);
+	padding: 5px;
+}
+
+#clear {
+	color: white;
+	background-color: red;
+	padding: 3px;
+}

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Kontulodun",
+        "age": 17,
+        "major": "Teknik Informatika",
+        "id": 1
+    },
+    {
+        "name": "Reja",
+        "age": 19,
+        "major": "Teknik Komputer",
+        "id": 2
+    },
+    {
+        "name": "Rijal",
+        "age": 18,
+        "major": "Teknik Industri",
+        "id": 3
+    }
+
+]

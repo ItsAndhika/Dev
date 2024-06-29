@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col-md-8">
+		<h2>Contact List</h2>
+		<% if (success.length !== 0) { %>
+		<div class="alert alert-success" role="alert"><%= success %></div>
+		<% } %>
+		<a href="/add" class="btn btn-primary">Add New Contact</a>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">Phone Number</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% if (!contacts.length) { %>
+				<div class="alert alert-danger mt-3" role="alert">
+					There are no contacts here yet!
+				</div>
+				<% } else { %> <% let num = 1 %> <% contacts.forEach(contact => { %>
+				<tr>
+					<th scope="row"><%= num++ %></th>
+					<td><%= contact.name %></td>
+					<td><%= contact.phoneNumber %></td>
+					<td class="d-flex">
+						<a
+							href="/contact/<%= contact._id %>"
+							class="btn btn-primary badge me-2"
+							>Details</a
+						>
+						<a
+							href="/edit?id=<%= contact._id %>"
+							class="btn btn-warning badge me-2"
+							>Edit</a
+						>
+						<form action="/delete?_method=DELETE" method="post">
+							<input type="hidden" name="id" value="<%= contact._id %>" />
+							<button
+								type="submit"
+								class="btn btn-danger badge"
+								onclick="return confirm('Are you sure?')"
+							>
+								Delete
+							</button>
+						</form>
+					</td>
+				</tr>
+				<% }) %> <% } %>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web Storage</title>
+		<style>
+			.dark-mode {
+				background-color: #222;
+				color: #fff;
+			}
+
+			a {
+				color: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello!</h1>
+		<a href="" onclick="changeName()">Change Name</a>
+		<a href="" onclick="deleteName()">Delete Name</a>
+		<a href="" class="toggle">Dark Mode</a>
+		<a href="" onclick="deleteStorage()">Delete Storage</a>
+		<script>
+			const title = document.getElementsByTagName("h1")[0];
+			let name = localStorage.getItem("name");
+			if (!name) {
+				name = prompt("Insert your name...");
+				localStorage.setItem("name", name);
+			}
+			title.innerHTML = `Servus ${name}!`;
+
+			const changeName = (e) => {
+				name = prompt("Insert your new name...");
+				localStorage.setItem("name", name);
+				e.preventDefault();
+			};
+
+			const deleteName = (e) => {
+				localStorage.removeItem("name");
+				e.preventDefault();
+			};
+
+			const deleteStorage = (e) => {
+				localStorage.clear();
+				e.preventDefault();
+			};
+
+			// Dark Mode
+			const toggleButton = document.getElementsByClassName("toggle")[0];
+			let theme = localStorage.getItem("theme");
+			if (!theme) {
+				localStorage.setItem("theme", "light");
+			}
+
+			const darkMode = () => {
+				document.body.classList.add("dark-mode");
+				toggleButton.innerHTML = "Light Mode";
+				localStorage.setItem("theme", "dark");
+			};
+
+			const lightMode = () => {
+				document.body.classList.remove("dark-mode");
+				toggleButton.innerHTML = "Dark Mode";
+				localStorage.setItem("theme", "light");
+			};
+
+			if (theme === "dark") {
+				darkMode();
+			}
+
+			toggleButton.addEventListener("click", function (e) {
+				theme = localStorage.getItem("theme");
+				if (theme === "light") {
+					darkMode();
+				} else {
+					lightMode();
+				}
+				e.preventDefault();
+			});
+		</script>
+	</body>
+</html>

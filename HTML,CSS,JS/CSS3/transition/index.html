@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transition</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				width: 100%;
+			}
+
+			.regtangle {
+				width: 100px;
+				height: 100px;
+				background-color: salmon;
+				transition: 1s;
+			}
+
+			.container:hover .regtangle {
+				transform: rotate(180deg);
+				transform: translateX(900px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="regtangle"></div>
+		</div>
+	</body>
+</html>

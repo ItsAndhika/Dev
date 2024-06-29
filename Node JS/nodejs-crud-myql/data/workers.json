@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Totlodon",
+        "age": 20,
+        "email": "totlodon@gmail.com",
+        "address": "Bandung"
+    },
+    {
+        "name": "Reja",
+        "age": 18,
+        "email": "reja@gmail.com",
+        "address": "Surabaya"
+    },
+    {
+        "name": "Rijal",
+        "age": 19,
+        "email": "rijal@gmail.com",
+        "address": "Jakarta"
+    }
+]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Text Shadow</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			h1 {
+				text-align: center;
+				font-size: 100px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.first h1 {
+				color: white;
+				text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.7); /* inset and spread is not available in text shadow! */
+			}
+
+			.second {
+				background-color: black;
+				color: white;
+				width: 100%;
+			}
+
+			.second h1 {
+				text-shadow: 0px 0px 15px rgba(255, 247, 0, 0.7);
+			}
+
+			.third {
+				background-color: rgb(77, 77, 77);
+				width: 100%;
+				color: black;
+			}
+
+			.third h1 {
+				text-shadow: 0px 0.5px 0px rgba(255, 255, 255, 0.7);
+			}
+
+			.fourth {
+				width: 100%;
+				background-color: black;
+				color: white;
+			}
+
+			.fourth h1 {
+				text-shadow: 5px 5px 20px rgb(242, 73, 242),
+					-5px -5px 20px rgb(242, 73, 242);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first">
+			<h1>Lodon Makan Pisang</h1>
+		</div>
+		<div class="second">
+			<h1>Budi Kentut</h1>
+		</div>
+		<div class="third">
+			<h1>Udin Main PS</h1>
+		</div>
+		<div class="fourth">
+			<h1>Badu Main Kelereng</h1>
+		</div>
+	</body>
+</html>

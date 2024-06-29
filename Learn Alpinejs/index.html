@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Alpine Counter</title>
+		<script src="./Tailwind CSS CDN.js"></script>
+		<script defer src="./Alpine.js CDN.js"></script>
+	</head>
+	<body class="text-center flex flex-col gap-5 max-w-lg mx-auto mt-10">
+		<div
+			x-data="{ counter: 0 }"
+			class="flex justify-center items-center text-lg gap-10"
+		>
+			<button @click="counter--">-</button>
+			<p x-text="counter"></p>
+			<button @click="counter++">+</button>
+		</div>
+
+		<div x-data>
+			<ul>
+				<template x-for="name in $store.students.name">
+					<li x-text="name"></li>
+				</template>
+			</ul>
+		</div>
+
+		<button
+			x-data
+			@click="alert('Button clicked!')"
+			class="w-28 mx-auto px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+		>
+			Click Me
+		</button>
+
+		<div
+			class="container p-10 bg-slate-950 rounded-xl overflow-hidden"
+			x-data="{name: 'Lodon', number: 2, link: '<a href=`https://youtube.com/sandhikagalihWPU`>Sandhika Galih</a>'}"
+		>
+			<h1
+				class="text-5xl font-bold bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 text-transparent bg-clip-text"
+			>
+				Hello, <span x-text="name"></span>, <span x-text="number"></span> is an
+				<span x-text="number % 2 == 0 ? 'even' : 'odd'"></span> number
+			</h1>
+			<h2
+				class="text-4xl font-bold bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 text-transparent bg-clip-text"
+			>
+				My mastah's youtube channel
+				<span x-html="link" class="underline"></span>
+			</h2>
+		</div>
+
+		<script>
+			document.addEventListener("alpine:init", () => {
+				Alpine.store("students", {
+					year: 2023,
+					name: ["Budi", "Jono", "Udin"],
+				});
+			});
+		</script>
+	</body>
+</html>

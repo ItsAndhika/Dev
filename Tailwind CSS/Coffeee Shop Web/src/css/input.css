@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: "Inter", sans-serif;
+        transition: .2s linear;
+    }
+    header nav a {
+        @apply mx-2
+    }
+    header .nav a {
+        @apply mx-auto py-5
+    }
+    header .nav a:hover {
+        @apply text-main border-b-[.1px] border-main pb-6
+    }
+    header nav a:hover {
+        @apply text-main border-b-[.1px] border-main pb-2
+    }
+    header .icons i:nth-child(3) {
+        @apply md:hidden
+    }
+    .btn {
+        @apply bg-main py-[10px] px-[15px] text-base text-white hover:bg-[#e5be8e] shadow-2xl
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply h-60 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden;
+    }
+}
+
+@layer utilities {
+    #toggle:checked~label div .toggle-circle {
+        transform: translateX(10px);
+    }
+}

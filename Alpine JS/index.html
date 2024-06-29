@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="dist/tailwind.js"></script>
+		<script defer src="dist/app.js"></script>
+	</head>
+
+	<body>
+		<!-- <div x-data="{ name : 'Lidin' }">
+			<h1 x-text="name"></h1>
+		</div>
+
+		<div x-data>
+			<ul>
+				<template x-for="nm in $store.students.name">
+					<li x-text="nm"></li>
+				</template>
+			</ul>
+		</div>
+
+		<button x-data @click="alert('Clicked')">Click Me</button> -->
+
+		<div
+			class="container w-1/2 h-60 mt-20 bg-slate-600 text-center mx-auto rounded-lg"
+			x-data="{name: 'Primananda', id: 3, link: '<a href=`https://youtube.com/@windahbasudara`>Primananda</a>', open: false}"
+		>
+			<!-- <h1
+				class="text-5xl bg-gradient-to-r from-blue-600 to-teal-600 text-transparent bg-clip-text font-bold"
+			>
+				I am <span x-text="name"></span>, my id is <span x-text="id"></span> and
+				that is
+				<span x-text="id % 2 === 0 ? 'even number' : 'odd number'"></span>
+			</h1> -->
+			<!-- <h1
+				class="text-5xl bg-gradient-to-r from-blue-600 to-teal-600 text-transparent bg-clip-text font-bold"
+			>
+				I am <span x-html="link"></span>
+			</h1> -->
+			<button
+				x-on:click="open = !open"
+				x-text="open == false ? 'Open' : 'Close'"
+				x-bind:class="open ? 'bg-red-600' : 'bg-blue-600'"
+				class="w-40 h-20 px-5 py-2 text-white font-bold text-center rounded-lg text-2xl mt-5"
+			>
+				Open
+			</button>
+			<div
+				x-show="open"
+				x-transition.duration.1000ms
+				class="w-3/4 bg-teal-600 text-xl font-semibold rounded-lg text-white mt-3 mx-auto"
+			>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, vitae.
+			</div>
+		</div>
+
+		<div
+			class="container w-1/2 h-40 mt-40 bg-teal-600 text-center mx-auto rounded-lg"
+			x-data="{message: 'Hello'}"
+		>
+			<!-- <button
+				@click="console.log($event.target.classList.toggle('bg-red-600'))"
+				class="w-40 h-20 bg-slate-600 px-5 py-2 text-white font-bold text-center rounded-lg text-2xl mt-5"
+				data-message="Hello world"
+			>
+				Click Me!
+			</button> -->
+			<label for="name" class="text-2xl font-bold block mb-2 text-slate-900"
+				>Your Name</label
+			>
+			<input
+				type="text"
+				@keyup.a="alert('Input is accepted ')"
+				class="block text-center w-3/4 p-2 mx-auto border border-slate-600 rounded-lg"
+			/>
+		</div>
+
+		<script>
+			document.addEventListener("alpine:init", () => {
+				Alpine.store("students", {
+					name: ["Lodon", "Lidin", "Ludun"],
+				});
+			});
+		</script>
+	</body>
+</html>

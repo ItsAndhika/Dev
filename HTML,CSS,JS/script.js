@@ -1,0 +1,1 @@
+const c = document.getElementsByClassName("navbar");

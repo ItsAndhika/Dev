@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	img {
+		max-width: 100%;
+	}
+
+	main {
+		@apply p-10 max-w-[500px] mx-auto overflow-x-hidden;
+	}
+}
+
+@layer components {
+}

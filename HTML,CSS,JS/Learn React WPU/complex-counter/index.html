@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learn React</title>
+		<script src="../js/react.development.js"></script>
+		<script src="../js/react-dom.development.js"></script>
+		<script src="../js/babel.min.js"></script>
+		<style>
+			body {
+				text-align: center;
+			}
+
+			.counter button {
+				margin: 10px;
+			}
+
+			.inactive {
+				opacity: 0.3;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			const container = document.getElementById("root");
+			const root = ReactDOM.createRoot(container);
+			const Button = ({ text, onClick }) => {
+				return <button onClick={onClick}>{text}</button>;
+			};
+			const App = () => {
+				const [counter, setCounter] = React.useState(0);
+				return (
+					<main>
+						<section className="counter">
+							<Button
+								text="-"
+								onClick={() => setCounter((prev) => prev - 1)}
+								className={counter > 9 || counter < 0 ? "inactive" : ""}
+							/>
+							{counter}
+							<Button
+								text="+"
+								onClick={() => setCounter((prev) => prev + 1)}
+								className={counter > 9 || counter < 0 ? "inactive" : ""}
+							/>
+						</section>
+						<Button
+							text="Reset!"
+							onClick={() => setCounter((prev) => (prev = 0))}
+							className={counter < 9 || counter > 0 ? "inactive" : ""}
+						/>
+					</main>
+				);
+			};
+			root.render(<App />);
+		</script>
+	</body>
+</html>

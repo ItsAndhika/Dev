@@ -1,0 +1,16 @@
+<%- include('layouts/header') %> 
+<%- include('layouts/navbar') %> 
+<div class="container mb-3">
+    <% worker.forEach(w => { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Name : <%= w.name %> </h5>
+              <h6 class="card-subtitle mb-2 text-muted">Age : <%= w.age %></h6>
+              <p class="card-text">Email : <%= w.email %></p>
+              <p class="card-text">Address : <%= w.address %></p>
+              <a href="/workers" class="card-link text-decoration-none">Back to workers list</a>
+            </div>
+        </div>
+    <% }) %>
+</div>
+<%- include('layouts/footer') %> 

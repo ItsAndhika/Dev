@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			form {
+				width: 600px;
+				padding: 20px;
+			}
+
+			form div {
+				margin-bottom: 10px;
+			}
+
+			label {
+				display: block;
+			}
+
+			input:valid {
+				border-radius: 2px;
+				outline: inherit;
+				border: 1px solid black;
+			}
+
+			input:invalid,
+			input:required:invalid {
+				border: none;
+				outline: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post" autocomplete="off">
+			<div>
+				<label for="name">Name : </label>
+				<input
+					type="text"
+					name="name"
+					id="name"
+					autofocus
+					required
+					minlength="2"
+					maxlength="5"
+					oninvalid="this.setCustomValidity('Wajib diisi!')"
+					oninput="this.setCustomValidity('')"
+				/>
+			</div>
+			<div>
+				<label for="email">Email : </label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label for="noHP">noHP : </label>
+				<input type="tel" name="noHP" id="noHP" />
+			</div>
+			<div>
+				<label for="website">Website : </label>
+				<input type="url" name="website" id="website" />
+			</div>
+			<div>
+				<label for="number">Number : </label>
+				<input
+					type="number"
+					name="number"
+					id="number"
+					min="0"
+					max="100"
+					step="5"
+				/>
+			</div>
+			<div>
+				<label for="slider">Number : </label>
+				<input
+					type="range"
+					name="slider"
+					id="slider"
+					min="0"
+					max="100"
+					step="5"
+				/>
+				<span class="value"></span>
+			</div>
+			<div>
+				<label for="date">Date : </label>
+				<input type="date" name="date" id="date" />
+			</div>
+			<div>
+				<label for="color">Color : </label>
+				<input type="color" name="color" id="color" />
+				<span class="hexa"></span>
+			</div>
+			<div>
+				<label for="postCode">Post Code : </label>
+				<input type="text" name="postCode" id="postCode" pattern="" />
+			</div>
+			<div>
+				<button type="submit">Send</button>
+			</div>
+		</form>
+		<script>
+			const slider = document.getElementById("slider");
+			const value = document.getElementsByClassName("value")[0];
+			const color = document.getElementById("color");
+			const hexa = document.getElementsByClassName("hexa")[0];
+			hexa.innerHTML = color.value;
+			value.innerHTML = slider.value;
+			slider.addEventListener("input", function () {
+				value.innerHTML = slider.value;
+			});
+			color.addEventListener("input", function () {
+				hexa.innerHTML = color.value;
+				document.body.style.backgroundColor = color.value;
+			});
+		</script>
+	</body>
+</html>

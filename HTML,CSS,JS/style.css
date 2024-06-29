@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    background-color: crimson;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: white;
+    list-style-type: none;
+}

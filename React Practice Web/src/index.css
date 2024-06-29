@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-[#000300]
+    }
+
+    #menu {
+        @apply w-7 h-5 flex flex-col justify-between items-center cursor-pointer sm:hidden
+    }
+
+    #menu span {
+        @apply w-full h-[2px] bg-white transition-all duration-500
+    }
+
+    .firstSpan {
+        @apply rotate-[45deg] origin-left -translate-y-[0.9px]
+    }
+
+    .secondSpan {
+        @apply scale-0
+    }
+
+    .thirdSpan {
+        @apply -rotate-[45deg] origin-left translate-y-[0.5px]
+    }
+}

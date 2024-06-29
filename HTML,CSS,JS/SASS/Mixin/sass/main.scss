@@ -1,0 +1,41 @@
+// .header ul, .footer ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     li {
+//         display: inline-block;
+//     }
+// }
+
+// Mixin
+// Simple Mixin
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}
+
+.header ul {
+    @include inline-list(); 
+    li {
+        background-color: black;
+        padding: 10px;
+        a {
+            color: white
+        }
+    }
+}
+
+.footer ul {
+    @include inline-list();
+    li {
+        background-color: green;
+        padding: 10px;
+        a {
+            color: white
+        }
+    }
+}

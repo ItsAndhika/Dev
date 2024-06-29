@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontaws/css/all.css">
+</head>
+<body class="bg-bg capitalize m-0 p-0 box-border outline-none transition duration-200">
+    <!-- Header Start -->
+    <header class="w-full flex justify-between items-center text-center p-10 fixed top-0 right-0 left-0 z-30 text-white border-b-[.1px] border-border">
+        <div class="logo">
+            <a href="#home"><img src="img/logo.png" alt=""></a>
+        </div>
+        <nav class="hidden md:block">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+        <div class="icons text-lg flex justify-between relative">
+            <i class="fas fa-search cursor-pointer pl-4 relative hover:text-main" id="search-btn"></i>
+            <i class="fas fa-shopping-cart cursor-pointer pl-4 relative hover:text-main" id="cart"></i>
+            <i class="fas fa-bars cursor-pointer pl-4 relative hover:text-main" id="hamburger"></i>
+        </div>
+        <div class="w-[50%] absolute top-[115%] right-[7%] hidden" id="search-form">
+            <label for="search" class="fas fa-search cursor-pointer absolute right-8 top-2.5 text-black hover:text-main"></label>
+            <input type="search" class="p-2 w-full h-full text-blck ring-0" name="search" id="search" placeholder="Search here..." autofocus>
+        </div>
+        <div class="bg-slate-200 absolute top-full right-0 md:w-[25%] h-[] px-5 text-black p-5 z-50 sm:w-1/2 gap-5 hidden" id="checkout">
+            <div class="flex items-center py-2 relative">
+                <i class="fas fa-times absolute top-4 right-4 font-bold cursor-pointer text-lg hover:text-main"></i>
+                <img src="img/cart-item-1.png" alt="" width="100">
+                <div class="content">
+                    <h3 class="font-bold text-lg py-3">cart item 01</h3>
+                    <p class="font-semibold">$15.99 <span class="text-sm font-light line-through">$10.99</span></p>
+                </div>
+            </div>
+            <div class="flex items-center py-2 relative">
+                <i class="fas fa-times absolute top-4 right-4 font-bold cursor-pointer text-lg hover:text-main"></i>
+                <img src="img/cart-item-2.png" alt="" width="100">
+                <div class="content">
+                    <h3 class="font-bold text-lg py-3">cart item 02</h3>
+                    <p class="font-semibold">$15.99 <span class="text-sm font-light line-through">$10.99</span></p>
+                </div>
+            </div>
+            <div class="flex items-center py-2 relative">
+                <i class="fas fa-times absolute top-4 right-4 font-bold cursor-pointer text-lg hover:text-main"></i>
+                <img src="img/cart-item-3.png" alt="" width="100">
+                <div class="content">
+                    <h3 class="font-bold text-lg py-3">cart item 03</h3>
+                    <p class="font-semibold">$15.99 <span class="text-sm font-light line-through">$10.99</span></p>
+                </div>
+            </div>
+            <div class="flex items-center py-2 mb-5 relative">
+                <i class="fas fa-times absolute top-4 right-4 font-bold cursor-pointer text-lg hover:text-main"></i>
+                <img src="img/cart-item-4.png" alt="" width="100">
+                <div class="content">
+                    <h3 class="font-bold text-lg py-3">cart item 04</h3>
+                    <p class="font-semibold">$15.99 <span class="text-sm font-light line-through">$10.99</span></p>
+                </div>
+            </div>
+            <a href="" class="btn">checkout now</a>
+        </div>
+        <nav class="w-56 h-[75vh] bg-white absolute top-full right-0 flex flex-col items-center justify-center text-black text-lg nav hidden" id="sm-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Home Start -->
+    <section id="home" class="min-w-[100vh] flex justify-center items-center bg-url[img/home-img.jpeg] bg-no-repeat bg-slate-200 relative">
+        <h3 class="uppercase text-slate-200 text-xl font-bold">fresh coffe in the morning</h3>
+        <div class="content">
+            
+        </div>
+    </section>
+    <!-- Home End -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>

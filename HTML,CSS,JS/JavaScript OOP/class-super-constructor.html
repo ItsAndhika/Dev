@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Class Super Constructor</title>
+	</head>
+	<body>
+		<script>
+			class Employee {
+				constructor(name, age) {
+					(this.name = name), (this.age = age);
+				}
+
+				showIndentity() {
+					console.log(
+						`My name is employee ${this.name}, i am ${this.age} years old`
+					);
+				}
+			}
+
+			class Manager extends Employee {
+				constructor(name, lastName, age) {
+					super(name, age);
+					this.lastName = lastName;
+				}
+
+				showIndentity() {
+					console.log(
+						`My name is manager ${this.name} ${this.lastName}, i am ${this.age} years old`
+					);
+				}
+			}
+			const lodon = new Employee("Lodon", 20);
+			const udin = new Manager("Udin", "Petot", 30);
+			lodon.showIndentity();
+			udin.showIndentity();
+		</script>
+	</body>
+</html>

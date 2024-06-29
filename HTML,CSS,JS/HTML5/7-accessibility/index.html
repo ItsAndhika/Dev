@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web Accessibility</title>
+	</head>
+	<body>
+		<h1>Servus!</h1>
+		<label
+			>Name :
+			<input type="text" name="name" id="name" />
+		</label>
+		<label for="major">Major : </label>
+		<select name="major" id="major">
+			<option value="if">Teknik Informatika</option>
+			<option value="si">Sistem Informasi</option>
+		</select>
+		<button style="margin-bottom: 30px" onclick="alert('Real button')">
+			Send
+		</button>
+
+		<div
+			tabindex="0"
+			onclick="showAlert('Fake Button')"
+			role="button"
+			id="button1"
+		>
+			Button 1
+		</div>
+		<div>Button 2</div>
+		<div>Button 3</div>
+
+		<script>
+			const showAlert = (text) => alert(text);
+			const button1 = document.getElementById("button1");
+			button1.addEventListener("keyup", function (e) {
+				if (e.keyCode == 32 || e.keyCode == 13) {
+					showAlert("Hello");
+				}
+			});
+		</script>
+	</body>
+</html>

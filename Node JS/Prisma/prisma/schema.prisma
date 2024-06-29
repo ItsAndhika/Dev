@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  firstName  String
+  lastName   String
+  age        Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  houseOwned House[]  @relation("House Owner")
+  houseBuilt House[]  @relation("House Builder")
+}
+
+model House {
+  id           String   @id @default(uuid())
+  address      String   @unique
+  wifiPassword String?
+  owner        User     @relation("House Owner", fields: [owner_id], references: [id])
+  owner_id     String
+  builtBy      User     @relation("House Builder", fields: [builtBy_id], references: [id])
+  builtBy_id   String
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
